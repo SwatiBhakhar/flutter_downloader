@@ -21,7 +21,7 @@ public class IntentUtils {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             Uri uri = FileProvider.getUriForFile(context, context.getPackageName() + ".flutter_downloader.provider", file);
-            Log.e("Provider name===",+context.getPackageName() + ".flutter_downloader.provider");
+            Log.e("Provider name===",context.getPackageName() + ".flutter_downloader.provider");
             intent.setDataAndType(uri, mime);
         } else {
             intent.setDataAndType(Uri.fromFile(file), mime);
